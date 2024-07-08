@@ -8,12 +8,27 @@
     tools:context=".MainActivity">
 
     <TextView
+        android:id="@+id/text_activity"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Hello World!"
+        android:fontFamily="@font/roboto"
+        android:text="@string/text_activity"
+        android:textColor="@color/text_color"
+        android:textSize="20sp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
+
+    <Button
+        android:id="@+id/btn_to_second_activity"
+        style="@style/btn_style"
+        android:layout_marginTop="40dp"
+        android:text="@string/btn_text"
+        app:cornerRadius="12sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/text_activity" />
+
 
 </androidx.constraintlayout.widget.ConstraintLayout>

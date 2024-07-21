@@ -21,9 +21,9 @@ class MainActivity : AppCompatActivity() {
             v.setPadding(systemBars.left, systemBars.top, systemBars.right, systemBars.bottom)
             insets
         }
-        val btn = findViewById<Button>(R.id.btn_to_second_activity)
+        val button = findViewById<Button>(R.id.button_to_second_activity)
         val textView = getString(R.string.text_activity)
-        btn.setOnClickListener {
+        button.setOnClickListener {
             val intent = Intent(this, SecondActivity::class.java).apply {
                 putExtra(EXTRA_TEXT_VIEW, textView)
             }

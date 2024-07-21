@@ -20,8 +20,8 @@ class SecondActivity : AppCompatActivity() {
             insets
         }
         val message = intent.getStringExtra(EXTRA_TEXT_VIEW)
-        val btn = findViewById<Button>(R.id.btn_notification)
-        btn.setOnClickListener {
+        val button = findViewById<Button>(R.id.button_notification)
+        button.setOnClickListener {
             Toast.makeText(this, message, Toast.LENGTH_SHORT).show()
         }
     }

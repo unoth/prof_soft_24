@@ -1,6 +1,7 @@
 plugins {
     alias(libs.plugins.android.application)
     alias(libs.plugins.jetbrains.kotlin.android)
+    id("kotlin-kapt")
 }
 
 android {
@@ -33,6 +34,10 @@ android {
     kotlinOptions {
         jvmTarget = "1.8"
     }
+
+    buildFeatures {
+        viewBinding = true
+    }
 }
 
 dependencies {
@@ -45,4 +50,19 @@ dependencies {
     testImplementation(libs.junit)
     androidTestImplementation(libs.androidx.junit)
     androidTestImplementation(libs.androidx.espresso.core)
+
+//moshi
+    implementation(libs.moshi.kotlin)
+    implementation(libs.moshi)
+    kapt("com.squareup.moshi:moshi-kotlin-codegen:1.14.0")
+
+//retrofit
+    implementation(libs.retrofit.v290)
+    implementation(libs.converter.moshi.v290)
+    implementation(libs.okhttp3.okhttp)
+    implementation(libs.logging.interceptor)
+    implementation (libs.converter.gson.v250)
+
+    implementation("com.github.chuckerteam.chucker:library:4.0.0")
+
 }

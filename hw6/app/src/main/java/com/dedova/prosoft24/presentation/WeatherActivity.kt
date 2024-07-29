@@ -7,8 +7,8 @@ import androidx.appcompat.app.AppCompatActivity
 import androidx.lifecycle.ViewModelProvider
 import com.dedova.prosoft24.data.api.ApiService
 import com.dedova.prosoft24.data.model.WeatherResponse
+import com.dedova.prosoft24.data.repository.WeatherRepository
 import com.dedova.prosoft24.databinding.ActivityWeatherBinding
-import com.dedova.prosoft24.domain.repository.WeatherRepository
 import com.dedova.prosoft24.presentation.viewmodel.WeatherViewModel
 import com.dedova.prosoft24.presentation.viewmodel.WeatherViewModelFactory
 

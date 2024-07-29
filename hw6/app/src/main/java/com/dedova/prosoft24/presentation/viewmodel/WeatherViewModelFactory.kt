@@ -2,7 +2,7 @@ package com.dedova.prosoft24.presentation.viewmodel
 
 import androidx.lifecycle.ViewModel
 import androidx.lifecycle.ViewModelProvider
-import com.dedova.prosoft24.domain.repository.WeatherRepository
+import com.dedova.prosoft24.data.repository.WeatherRepository
 
 
 class WeatherViewModelFactory constructor(private val repository: WeatherRepository) :

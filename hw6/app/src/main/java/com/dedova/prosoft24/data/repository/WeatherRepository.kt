@@ -1,4 +1,4 @@
-package com.dedova.prosoft24.domain.repository
+package com.dedova.prosoft24.data.repository
 
 import com.dedova.prosoft24.data.api.ApiService
 

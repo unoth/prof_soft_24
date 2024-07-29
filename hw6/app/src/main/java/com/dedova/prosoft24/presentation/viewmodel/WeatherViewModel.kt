@@ -5,7 +5,7 @@ import androidx.lifecycle.MutableLiveData
 import androidx.lifecycle.ViewModel
 import androidx.lifecycle.viewModelScope
 import com.dedova.prosoft24.data.model.WeatherResponse
-import com.dedova.prosoft24.domain.repository.WeatherRepository
+import com.dedova.prosoft24.data.repository.WeatherRepository
 import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.launch
 

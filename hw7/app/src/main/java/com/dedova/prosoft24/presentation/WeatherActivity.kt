@@ -1,32 +1,23 @@
 package com.dedova.prosoft24.presentation
 
-import android.annotation.SuppressLint
 import android.os.Bundle
 import android.view.View
 import android.widget.Toast
 import androidx.appcompat.app.AppCompatActivity
-import androidx.lifecycle.ViewModelProvider
-import com.dedova.prosoft24.data.api.ApiService
 import com.dedova.prosoft24.data.model.WeatherResponse
-import com.dedova.prosoft24.data.repository.WeatherRepository
 import com.dedova.prosoft24.databinding.ActivityWeatherBinding
 import com.dedova.prosoft24.presentation.viewmodel.WeatherViewModel
-import com.dedova.prosoft24.presentation.viewmodel.WeatherViewModelFactory
+import org.koin.androidx.viewmodel.ext.android.viewModel
 
 class WeatherActivity : AppCompatActivity() {
 
     private lateinit var binding: ActivityWeatherBinding
-    private lateinit var weatherViewModel: WeatherViewModel
-    private lateinit var weatherViewModelFactory: WeatherViewModelFactory
+    private val weatherViewModel by viewModel<WeatherViewModel>()
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         binding = ActivityWeatherBinding.inflate(layoutInflater)
         setContentView(binding.root)
-        weatherViewModelFactory =
-            WeatherViewModelFactory(WeatherRepository(ApiService.getInstance()))
-        weatherViewModel =
-            ViewModelProvider(this, weatherViewModelFactory)[WeatherViewModel::class.java]
         weatherViewModel.loadWeather()
         setUpObservers()
     }

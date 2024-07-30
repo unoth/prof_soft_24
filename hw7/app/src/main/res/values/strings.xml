@@ -1,0 +1,17 @@
+<resources>
+    <string name="app_name">ProSoft24</string>
+    <string name="feels_like">Feels like %s°C, %s.</string>
+    <string name="min_max_pressure_humidity_visibility">
+        min: %s°C, max: %s°C \n
+        pressure: %s hPa \n
+        humidity: %s % \n
+        visibility: %s km
+    </string>
+    <string name="wind_speed_gust_direction">
+        wind speed: %s m/s \n
+        gust: %s m/s \n
+        direction: NE
+    </string>
+    <string name="temp">%s°C</string>
+    <string name="weather_title">Погода</string>
+</resources>
